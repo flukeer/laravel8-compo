@@ -61,7 +61,7 @@ class StaffController extends Controller
         //validation
         $request->validate([
             'title' => 'required',
-            'price' => 'required',
+            'salary' => 'required',
             // 'photo' => 'required',
         ]);
 
@@ -121,7 +121,7 @@ class StaffController extends Controller
         //validation
         $request->validate([
             'title' => 'required',
-            'price' => 'required',
+            'salary' => 'required',
             // 'photo' => 'required',
         ]);
 
