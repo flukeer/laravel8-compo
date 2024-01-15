@@ -85,17 +85,13 @@ Route::get("/gallery/cat", function () {
     return view("test/cat", compact("cat"));
 });
 
-Route::middleware(['auth', 'role:admin,teacher,student'])->group(function () {
 Route::get("/teacher" , function (){
 	return view("teacher");
 });
-});
-
 
 Route::get("/student" , function (){
 	return view("student");
-})->middleware('auth');
-
+});
 
 Route::get("/theme" , function (){
 	return view("theme");
@@ -185,9 +181,4 @@ Route::get("/staff/{id}/edit", [StaffController::class, "edit"])->name('staff.ed
 Route::patch("/staff/{id}", [StaffController::class, "update"])->name('staff.update');
 Route::delete("/staff/{id}", [StaffController::class, "destroy"])->name('staff.destroy');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
 
