@@ -153,6 +153,7 @@
                                                         onclick="return confirm('Confirm delete?')"><i
                                                             class="fa fa-trash-o" aria-hidden="true"></i>
                                                         Delete</button>
+                                                        
                                                 </form>
                                             </td>
                                         </tr>
