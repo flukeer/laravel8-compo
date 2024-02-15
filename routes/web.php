@@ -181,5 +181,8 @@ Route::get("/staff/{id}/edit", [StaffController::class, "edit"])->name('staff.ed
 Route::patch("/staff/{id}", [StaffController::class, "update"])->name('staff.update');
 Route::delete("/staff/{id}", [StaffController::class, "destroy"])->name('staff.destroy');
 
+// Route::get("/staff", [StaffController::class, "index"])->name('staff.index');
+
+
 
 
