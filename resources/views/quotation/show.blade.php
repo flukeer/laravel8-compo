@@ -11,6 +11,16 @@
                         <a href="{{ url('/quotation/' . $quotation->id . '/edit') }}" title="Edit Quotation"><button
                                 class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 Edit</button></a>
+                                <a href="{{ url('/quotation/' . $quotation->id . '/pdf') }}" title="PDF">
+                                    <button class="btn btn-success btn-sm">
+                                        <i class="fa fa-file" aria-hidden="true"></i> PDF
+                                    </button>
+                                </a>
+                                <button class="btn btn-secondary btn-sm" onclick="window.print();">
+                                    <i class="fa fa-print" aria-hidden="true"></i>
+                                    พิมพ์หน้านี้
+                                </button>
+                                
 
                         <form method="POST" action="{{ url('quotation' . '/' . $quotation->id) }}"
                             accept-charset="UTF-8" style="display:inline">
