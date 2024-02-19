@@ -9,6 +9,8 @@ use App\Http\Controllers\Covid19Controller;
 use App\Http\Controllers\ProductController;
 use App\Models\Staff;
 
+use Barryvdh\DomPDF\Facade\Pdf;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -180,5 +182,7 @@ Route::get('/staff/{id}', [StaffController::class, "show"])->name('staff.show');
 Route::get("/staff/{id}/edit", [StaffController::class, "edit"])->name('staff.edit');
 Route::patch("/staff/{id}", [StaffController::class, "update"])->name('staff.update');
 Route::delete("/staff/{id}", [StaffController::class, "destroy"])->name('staff.destroy');
+
+
 
 
